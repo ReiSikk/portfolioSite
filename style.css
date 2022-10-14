@@ -19,8 +19,8 @@ html {
   --spacing-xxxlarge: 11.089rem;
 
   /* !Font family */
-  --font-family_primary: "Roboto Mono", monospace;
-  --font-family_secondary: "Archivo", sans-serif;
+  --font-family_primary: "Archivo", sans-serif;
+  --font-family_secondary: "Roboto Mono", monospace;
 
   /* !Animation easing */
   --animation-easing: cubic-bezier(0, 0.99, 0.74, 1);
@@ -44,6 +44,16 @@ body {
   overflow-x: hidden;
   max-width: 1440px;
   scroll-behavior: smooth;
+}
+::-moz-selection {
+  /* Code for Firefox */
+  color: var(--color-dark);
+  background: var(--color-secondary-text);
+}
+
+::selection {
+  color: var(--color-dark);
+  background: var(--color-secondary-text);
 }
 img {
   max-width: 100%;
@@ -249,4 +259,25 @@ header span {
   gap: var(--spacing-medium);
   justify-content: space-between;
 }
+.header_left {
+  align-self: center;
+}
+header h1 {
+  font-size: 5.653rem;
+}
 /* ?header section ends  */
+
+/* ?projects section starts */
+.project_wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: var(--spacing-small);
+}
+
+.project_card {
+  border: solid 1px hotpink;
+  min-height: 350px;
+  max-height: 50vh;
+}
+
+/*  ?project section ends */ ;
