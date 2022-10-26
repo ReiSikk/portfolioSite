@@ -334,7 +334,14 @@ header h1 {
   border-radius: var(--bradius-cards);
   /*   box-shadow: 15px 15px 30px #1e1c20, -15px -15px 10px #1a191d; */
 }
-
+@media only screen and (max-width: 899px) {
+  .project_card {
+    flex-direction: column;
+  }
+  .project_card img {
+    min-width: 100%;
+  }
+}
 .project_card img {
   width: 50vw;
   height: auto;
@@ -375,9 +382,89 @@ header h1 {
   align-items: center;
   gap: var(--spacing-xsmall);
   transition: all 0.3s ease;
+  width: fit-content;
 }
 .solution_link:hover {
   gap: var(--spacing-small);
   cursor: pointer;
 }
-/*  ?project section ends */ ;
+/*  ?project section ends */
+
+/* ?about me section starts */
+#about_me {
+  margin-top: var(--spacing-xxlarge);
+  display: flex;
+  justify-content: space-between;
+  gap: var(--spacing-medium);
+}
+@media only screen and (max-width: 899px) {
+  #about_me img {
+    min-width: 100%;
+  }
+  #about_me {
+    flex-direction: column;
+  }
+}
+#about_me span {
+  color: var(--color-secondary-text);
+}
+#about_me h5 {
+  font-weight: 300;
+  padding-bottom: var(--spacing-medium);
+}
+#about_me img {
+  max-width: 33vw;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: var(--bradius-cards);
+}
+
+/* ?about me section ends */
+
+/* ?footer section begins */
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-dark-lighter);
+  min-height: 20vh;
+  margin-top: var(--spacing-medium);
+  border-top: solid 1px var(--color-secondary-text);
+}
+.footer_links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xsmall);
+  text-align: center;
+  padding-bottom: var(--spacing-medium);
+  font-family: var(--font-family_secondary);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 500;
+}
+.footer_links a:first-of-type {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xsmall);
+  align-self: center;
+}
+.footer_links img {
+  max-width: 32px;
+  object-fit: cover;
+}
+.footer_links span {
+  font-family: var(--font-family_primary);
+  text-transform: none;
+  letter-spacing: none;
+  color: var(--color-primary-text);
+  transition: all 0.2s ease;
+}
+.footer_links span:hover {
+  color: var(--color-secondary-text);
+}
+footer p {
+  font-size: 14px;
+}
+
+/* ?footer section ends */
