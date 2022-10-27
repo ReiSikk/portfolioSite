@@ -1,17 +1,19 @@
 "use strict";
 
-import { animate, scroll, stagger, timeline } from "https://cdn.skypack.dev/motion";
+import { animate, inView } from "https://cdn.skypack.dev/motion";
+/* 
+inView("article", ({ target }) => {
+  animate(
+    target.querySelector("h3"),
+    { opacity: 1, transform: "none" },
+    { delay: 0.2, duration: 0.9, easing: [0.17, 0.55, 0.55, 1] }
+  );
+}); */
 
-window.addEventListener("DOMContentLoaded", start);
-
-//* INITIALIZE
-/* async function start() {
-  document.querySelectorAll(".project_card").forEach((card) => card.addEventListener("mouseover", timeline));
-} */
-
-// card animation
-/* const sequence = [
-  [".card_header", { translateY: [200, 0] }, { duration: 0.3 }],
-  [".card_header", { opacity: 1 }, { duration: 0.2 }, { at: -0.5 }],
-];
-scroll(timeline(sequence)); */
+inView(".project_card h3", (header) => {
+  console.log(header.target);
+  animate(header.target, {
+    transform: ["translateX(-200px)", "translateX(0px)"],
+    duration: "1s",
+  });
+});
