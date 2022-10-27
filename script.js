@@ -1,19 +1,32 @@
 "use strict";
-
 import { animate, inView } from "https://cdn.skypack.dev/motion";
-/* 
-inView("article", ({ target }) => {
-  animate(
-    target.querySelector("h3"),
-    { opacity: 1, transform: "none" },
-    { delay: 0.2, duration: 0.9, easing: [0.17, 0.55, 0.55, 1] }
-  );
-}); */
 
-inView(".project_card h3", (header) => {
-  console.log(header.target);
-  animate(header.target, {
-    transform: ["translateX(-200px)", "translateX(0px)"],
-    duration: "1s",
-  });
+window.addEventListener("DOMContentLoaded", init);
+
+function init() {
+  animate("body", { opacity: [0, 1] }, { duration: 1.5 });
+  //navigation bar animation
+  animate("nav", { transform: ["translateY(-100px)", "translateY(0px)"] }, { duration: 0.6 });
+}
+
+//project link animation
+inView(".card_left", (project) => {
+  console.log(project.target);
+  animate(
+    project.target,
+    {
+      transform: ["translateY(100px)", "translateY(0px)"],
+    },
+    { duration: 0.6, easing: [0.17, 0.55, 0.55, 1] }
+  );
+});
+inView(".card_right", (image) => {
+  console.log(image.target);
+  animate(
+    image.target,
+    {
+      transform: ["translateY(100px)", "translateY(0px)"],
+    },
+    { duration: 0.7, easing: [0.17, 0.55, 0.55, 1] }
+  );
 });
