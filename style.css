@@ -124,6 +124,13 @@ nav {
   gap: var(--spacing-small);
   padding-top: var(--spacing-small);
 }
+nav a {
+  transition: all 0.2s ease;
+}
+nav a:hover {
+  transform: translateX(1.5px);
+  color: var(--color-primary-text);
+}
 
 /* ?nav styles end */
 
