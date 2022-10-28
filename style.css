@@ -437,7 +437,7 @@ footer {
   background-color: var(--color-dark-lighter);
   min-height: 20vh;
   margin-top: var(--spacing-medium);
-  border-top: solid 1px var(--color-secondary-text);
+  padding-top: var(--spacing-medium);
 }
 .footer_links {
   display: flex;
@@ -472,6 +472,13 @@ footer {
 }
 footer p {
   font-size: 14px;
+  margin-top: auto;
+}
+.separator {
+  height: 1.5px;
+  width: 100%;
+  background: var(--color-secondary-text);
+  margin-bottom: var(--spacing-xsmall);
 }
 
 /* ?footer section ends */
