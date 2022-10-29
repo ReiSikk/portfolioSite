@@ -338,6 +338,7 @@ header h1 {
 .project_card {
   display: flex;
   gap: var(--spacing-medium);
+  width: 100%;
   border-radius: var(--bradius-cards);
   /*   box-shadow: 15px 15px 30px #1e1c20, -15px -15px 10px #1a191d; */
 }
@@ -348,6 +349,12 @@ header h1 {
   .project_card img {
     min-width: 100%;
   }
+}
+.project_card video {
+  width: 50vw;
+  height: auto;
+  object-fit: cover;
+  border-radius: var(--bradius-cards);
 }
 .project_card img {
   width: 50vw;
