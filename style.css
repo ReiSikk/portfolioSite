@@ -171,6 +171,9 @@ nav a:active {
   .mouse_container p {
     display: none !important;
   }
+  .project_wrapper {
+    padding-top: var(--spacing-medium) !important;
+  }
 
   .intro_link:first-of-type {
     display: none;
@@ -342,6 +345,10 @@ header h1 {
   h4 {
     font-size: 1.28rem;
   }
+  nav a:last-of-type,
+  nav span:last-of-type {
+    display: none;
+  }
 }
 #intro_links {
   padding-top: var(--spacing-large);
@@ -382,7 +389,7 @@ header h1 {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-xxlarge);
-  padding-top: var(--spacing-medium);
+  padding-top: var(--spacing-large);
 }
 #projects h2 {
   text-transform: uppercase;
@@ -534,16 +541,15 @@ footer {
   object-fit: cover;
 }
 .footer_links span {
-  font-family: var(--font-family_primary);
   text-transform: none;
-  letter-spacing: none;
   color: var(--color-primary-text);
   transition: all 0.2s ease;
 }
-.footer_links span:hover {
+.footer_links p {
   color: var(--color-secondary-text);
 }
-footer p {
+
+.copyright {
   font-size: 14px;
   margin-top: auto;
 }
