@@ -495,7 +495,6 @@ header h1 {
 }
 #about_me img {
   max-width: 33vw;
-  aspect-ratio: 1/1;
   object-fit: cover;
   border-radius: var(--bradius-cards);
 }
