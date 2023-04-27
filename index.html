@@ -158,6 +158,21 @@
           <img src="media/reiportrait.jpg" alt="portrait of Rei" />
         </section>
       </main>
+      <section id="form">
+      <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/meqwvbvd" method="post">
+        <h3>Contact me</h3>
+        <fieldset id="fs-frm-inputs">
+          <label for="email-address">Email Address</label>
+          <input type="email" name="_replyto" id="email-address" placeholder="email@domain.com" required="">
+             <label for="subject">Subject</label>
+          <input type="text" name="subject" id="subject" placeholder="Let me know what you need" required="">
+          <label for="message">Your message</label>
+          <textarea rows="5" name="message" id="message" placeholder="Leave your message here" required=""></textarea>
+          <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+        </fieldset>
+        <input id="submit-btn" type="submit" value="Send message">
+      </form>
+      </section>
       <footer>
         <div class="separator"></div>
         <div class="footer_links">
